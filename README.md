@@ -1,5 +1,13 @@
 # NodeJS-begin-to-advance-in-2-weeks
 
+## Throughout the Two Weeks
+
+- Daily coding practice
+- Reading documentation
+- Watching video tutorials
+- Participating in online communities (Stack Overflow, Reddit r/node)
+- Building small side projects to reinforce learning
+
 ## Week 1: Foundations and Basics
 
 ### Days 1-2: Introduction to Node.js
@@ -175,12 +183,4 @@
 3. Testing and debugging
 
 4. Basic deployment
-
-## Throughout the Two Weeks
-
-- Daily coding practice
-- Reading documentation
-- Watching video tutorials
-- Participating in online communities (Stack Overflow, Reddit r/node)
-- Building small side projects to reinforce learning
 
