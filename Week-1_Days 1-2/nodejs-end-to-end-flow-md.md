@@ -1,5 +1,8 @@
 # Node.js End-to-End Flow
 
+## Full work flow
+<img width="870" alt="Screenshot 2024-08-10 at 10 24 16" src="https://github.com/user-attachments/assets/1d241a20-56de-44a7-bf4c-f7ecdb2f601d">
+
 ## Diagram
 
 ```
