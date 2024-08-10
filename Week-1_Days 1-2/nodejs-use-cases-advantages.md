@@ -4,8 +4,8 @@
 
 1. Web Applications
    - [Full-stack JavaScript development (MEAN/MERN stack)](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/mean-mern-stack-nodejs.md)
-   - Single-page applications (SPAs)
-   - Progressive Web Apps (PWAs)
+   - [Single-page applications (SPAs)](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-single-page-applications.md)
+   - [Progressive Web Apps (PWAs)](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-progressive-web-apps.md)
 
 2. Real-time Applications
    - Chat applications
