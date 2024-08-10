@@ -4,8 +4,6 @@
 
 - Daily coding practice
 - Reading documentation
-- Watching video tutorials
-- Participating in online communities (Stack Overflow, Reddit r/node)
 - Building small side projects to reinforce learning
 
 ## Week 1: Foundations and Basics
