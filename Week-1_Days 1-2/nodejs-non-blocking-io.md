@@ -193,9 +193,7 @@ function better() {
 
 5. **Be aware of the event loop**: Async/await doesn't make synchronous operations asynchronous.
 
-# Why You Should Avoid Mixing Callbacks and Promises in Node.js
-
-## Overview
+## Why You Should Avoid Mixing Callbacks and Promises in Node.js
 
 Mixing callbacks and Promises in the same codebase, or worse, in the same function, can lead to several issues:
 
