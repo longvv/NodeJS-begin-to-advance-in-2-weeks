@@ -3,7 +3,7 @@
 ## Common Use Cases
 
 1. Web Applications
-   - Full-stack JavaScript development (MEAN/MERN stack)
+   - [Full-stack JavaScript development (MEAN/MERN stack)](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/mean-mern-stack-nodejs.md)
    - Single-page applications (SPAs)
    - Progressive Web Apps (PWAs)
 
@@ -39,8 +39,8 @@
 
 1. Performance
    - Non-blocking, event-driven architecture
-   - Fast execution with V8 engine
-   - Efficient handling of concurrent connections
+   - [Fast execution with V8 engine](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-v8-fast-execution.md)
+   - [Efficient handling of concurrent connections](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-concurrent-connections.md)
 
 2. Full-stack JavaScript
    - Use the same language on both frontend and backend
