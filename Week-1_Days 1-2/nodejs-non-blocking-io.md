@@ -61,24 +61,149 @@ operation((...args) => {
 });
 ```
 
-## Promises and Async/Await
+## Promises
 
-Modern Node.js also supports Promises and async/await for handling asynchronous operations:
+A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+
+### Syntax:
 
 ```javascript
-const fs = require('fs').promises;
+const myPromise = new Promise((resolve, reject) => {
+  // Asynchronous operation here
+  if (/* operation successful */) {
+    resolve(result);
+  } else {
+    reject(error);
+  }
+});
 
-async function readFile() {
+myPromise
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
+```
+
+### When to Use Promises:
+
+1. When dealing with asynchronous operations
+2. To avoid callback hell (nested callbacks)
+3. When you need to handle success and error cases separately
+4. When chaining multiple asynchronous operations
+
+### When Not to Use Promises:
+
+1. For simple, synchronous operations
+2. When callback-style APIs are more appropriate (e.g., event emitters)
+
+## Async/Await
+
+Async/await is syntactic sugar built on top of Promises, making asynchronous code look and behave more like synchronous code.
+
+### Syntax:
+
+```javascript
+async function myAsyncFunction() {
   try {
-    const data = await fs.readFile('/file.md');
-    console.log(data);
+    const result = await someAsyncOperation();
+    console.log(result);
   } catch (error) {
-    console.error('Error reading file:', error);
+    console.error(error);
   }
 }
-
-readFile();
 ```
+
+### When to Use Async/Await:
+
+1. When you want to write asynchronous code that looks synchronous
+2. For better readability in complex asynchronous flows
+3. When you need to use try/catch for error handling in asynchronous code
+4. When working with multiple Promises in a sequential manner
+
+### When Not to Use Async/Await:
+
+1. When you need to run multiple asynchronous operations in parallel (use Promise.all instead)
+2. In callback-based APIs that don't return Promises
+3. When dealing with event emitters or streams
+
+## Comparison and Examples
+
+### Callbacks vs Promises vs Async/Await
+
+1. **Callbacks**:
+
+```javascript
+fs.readFile('file.txt', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+});
+```
+
+2. **Promises**:
+
+```javascript
+fs.promises.readFile('file.txt')
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+```
+
+3. **Async/Await**:
+
+```javascript
+async function readFile() {
+  try {
+    const data = await fs.promises.readFile('file.txt');
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+}
+```
+
+## Best Practices
+
+1. **Always handle errors**: Use `.catch()` for Promises and try/catch for async/await.
+
+2. **Avoid mixing callbacks and Promises**: Stick to one pattern in a given function or module.
+
+3. **Use `Promise.all()` for parallel operations**:
+
+```javascript
+async function fetchMultipleUrls(urls) {
+  const promises = urls.map(url => fetch(url));
+  const responses = await Promise.all(promises);
+  return responses;
+}
+```
+
+4. **Avoid unnecessary async/await**:
+
+```javascript
+// Unnecessary
+async function unnecessary() {
+  return await somePromise(); // 'await' is not needed here
+}
+
+// Better
+function better() {
+  return somePromise();
+}
+```
+
+5. **Be aware of the event loop**: Async/await doesn't make synchronous operations asynchronous.
+
+## Limitations and Considerations
+
+1. **Error Handling**: Unhandled Promise rejections can lead to silent failures.
+
+2. **Debugging**: Async stack traces can be more challenging to follow.
+
+3. **Performance**: For very simple operations, callbacks might have a slight performance edge.
+
+4. **Browser Support**: While well-supported in modern environments, older browsers might require transpilation.
+
+5. **Mixing with Other Patterns**: Be cautious when mixing Promises/async-await with event emitters or streams.
 
 ## Potential Pitfalls
 
