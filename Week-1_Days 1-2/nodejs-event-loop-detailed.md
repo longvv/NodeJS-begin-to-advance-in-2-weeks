@@ -23,6 +23,29 @@ The event loop operates in the following phases:
 5. **Check**: Executes `setImmediate()` callbacks.
 6. **Close callbacks**: Executes close handlers.
 
+## Visual Representation
+
+```
+   ┌───────────────────────────┐
+┌─>│           timers          │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │     pending callbacks     │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+│  │       idle, prepare       │
+│  └─────────────┬─────────────┘      ┌───────────────┐
+│  ┌─────────────┴─────────────┐      │   incoming:   │
+│  │           poll            │<─────┤  connections, │
+│  └─────────────┬─────────────┘      │   data, etc.  │
+│  ┌─────────────┴─────────────┐      └───────────────┘
+│  │           check           │
+│  └─────────────┬─────────────┘
+│  ┌─────────────┴─────────────┐
+└──┤      close callbacks      │
+   └───────────────────────────┘
+```
+
 ## Detailed Flow
 
 1. **Event Loop Initialization**:
@@ -92,29 +115,6 @@ The event loop operates in the following phases:
 3. **`setImmediate()` vs `setTimeout(fn, 0)`**:
    - `setImmediate()` is designed to execute scripts once the current poll phase completes.
    - `setTimeout(fn, 0)` schedules script to be run after a minimum threshold in ms has elapsed.
-
-## Visual Representation
-
-```
-   ┌───────────────────────────┐
-┌─>│           timers          │
-│  └─────────────┬─────────────┘
-│  ┌─────────────┴─────────────┐
-│  │     pending callbacks     │
-│  └─────────────┬─────────────┘
-│  ┌─────────────┴─────────────┐
-│  │       idle, prepare       │
-│  └─────────────┬─────────────┘      ┌───────────────┐
-│  ┌─────────────┴─────────────┐      │   incoming:   │
-│  │           poll            │<─────┤  connections, │
-│  └─────────────┬─────────────┘      │   data, etc.  │
-│  ┌─────────────┴─────────────┐      └───────────────┘
-│  │           check           │
-│  └─────────────┬─────────────┘
-│  ┌─────────────┴─────────────┐
-└──┤      close callbacks      │
-   └───────────────────────────┘
-```
 
 ## Example
 
