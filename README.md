@@ -20,6 +20,8 @@
    - [Non-blocking I/O](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-non-blocking-io.md)
    - [Why was JS designed single-threaded](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/javascript-single-thread-explanation.md)
    - [Single-threaded nature](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-single-threaded-nature.md)
+   - [Libuv architect and mechanism](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-libuv-architecture.md)
+   - [V8 Engine](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-v8-fast-execution.md)
 
 3. [Setting up the development environment](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-dev-environment-setup.md)
    - Installing Node.js
