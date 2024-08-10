@@ -25,35 +25,59 @@ The event loop operates in the following phases:
 
 ## Detailed Flow
 
-1. **Entering the Event Loop**:
-   - Node.js initializes the event loop.
+1. **Event Loop Initialization**:
+   - When Node.js starts, it initializes the event loop.
    - Processes the provided input script.
-   - Enters the event loop.
+   - Begins processing the event loop.
 
-2. **Timers Phase**:
+2. **Phase Execution**:
+   - The loop iterates through each phase in order.
+   - Performs the operations specific to that phase.
+   - Moves to the next phase when the current phase's queue is empty or the maximum number of callbacks has been executed.
+
+3. **Timers**:
    - Checks for expired timers and executes their callbacks.
-   - Processes `setTimeout()` and `setInterval()` callbacks.
+   
+   ```javascript
+   setTimeout(() => console.log('Timer 1'), 0);
+   setTimeout(() => console.log('Timer 2'), 0);
+   ```
 
-3. **Pending Callbacks Phase**:
-   - Executes I/O callbacks deferred from the previous loop iteration.
+4. **Pending Callbacks**:
+   - Executes callbacks for some system operations (like TCP errors).
 
-4. **Idle, Prepare Phases**:
-   - Internal use only.
+5. **Poll**:
+   - Calculates how long to block and poll for I/O.
+   - Processes events in the poll queue.
+   
+   ```javascript
+   const fs = require('fs');
+   fs.readFile('file.txt', (err, data) => {
+     if (err) throw err;
+     console.log(data);
+   });
+   ```
 
-5. **Poll Phase**:
-   - Retrieves new I/O events.
-   - Executes I/O related callbacks.
-   - If there are no timers, it may block here.
-
-6. **Check Phase**:
+6. **Check**:
    - Executes `setImmediate()` callbacks.
+   
+   ```javascript
+   setImmediate(() => console.log('Immediate 1'));
+   setImmediate(() => console.log('Immediate 2'));
+   ```
 
-7. **Close Callbacks Phase**:
-   - Executes close event handlers.
+7. **Close Callbacks**:
+   - Executes close event callbacks.
+   
+   ```javascript
+   const server = require('http').createServer();
+   server.on('close', () => console.log('Server closed'));
+   server.close();
+   ```
 
-8. **Iteration Complete**:
-   - If there are no more callbacks to perform, the loop exits.
-   - Otherwise, it starts a new iteration.
+8. **Loop Continuation**:
+   - If there are still events to process, the loop continues.
+   - If all queues are empty, the process exits.
 
 ## Key Concepts
 
