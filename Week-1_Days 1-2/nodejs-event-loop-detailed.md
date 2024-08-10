@@ -12,17 +12,6 @@ At its core, the event loop does the following:
 2. Processes them
 3. Executes their callbacks
 
-## Event Loop Phases
-
-The event loop operates in the following phases:
-
-1. **Timers**: Executes callbacks scheduled by `setTimeout()` and `setInterval()`.
-2. **Pending callbacks**: Executes I/O callbacks deferred to the next loop iteration.
-3. **Idle, prepare**: Used internally by Node.js.
-4. **Poll**: Retrieves new I/O events; executes I/O related callbacks.
-5. **Check**: Executes `setImmediate()` callbacks.
-6. **Close callbacks**: Executes close handlers.
-
 ## Visual Representation
 
 ```
@@ -46,6 +35,17 @@ The event loop operates in the following phases:
    └───────────────────────────┘
 ```
 
+## Event Loop Phases
+
+The event loop operates in the following phases:
+
+1. **Timers**: Executes callbacks scheduled by `setTimeout()` and `setInterval()`.
+2. **Pending callbacks**: Executes I/O callbacks deferred to the next loop iteration.
+3. **Idle, prepare**: Used internally by Node.js.
+4. **Poll**: Retrieves new I/O events; executes I/O related callbacks.
+5. **Check**: Executes `setImmediate()` callbacks.
+6. **Close callbacks**: Executes close handlers.
+   
 ## Detailed Flow
 
 1. **Event Loop Initialization**:
