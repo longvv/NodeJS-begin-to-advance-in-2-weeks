@@ -13,6 +13,7 @@
 1. What is Node.js?
    - [History and evolution](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-history-evolution.md)
    - [Use cases and advantages](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-use-cases-advantages.md)
+   - [NodeJs workflow](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-end-to-end-flow-md.md) 
 
 2. Core concepts
    - [Event loop](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-event-loop-detailed.md)
