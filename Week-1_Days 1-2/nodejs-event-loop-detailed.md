@@ -2,6 +2,9 @@
 
 The event loop is the heart of Node.js, allowing it to perform non-blocking I/O operations despite JavaScript being single-threaded.
 
+![image](https://github.com/user-attachments/assets/0d2a995a-3000-47d3-b085-4791385ae481)
+
+
 ## Basic Concept
 
 At its core, the event loop does the following:
