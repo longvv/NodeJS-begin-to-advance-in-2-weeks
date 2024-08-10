@@ -4,8 +4,6 @@
 
 - Daily coding practice
 - Reading documentation
-- Watching video tutorials
-- Participating in online communities (Stack Overflow, Reddit r/node)
 - Building small side projects to reinforce learning
 
 ## Week 1: Foundations and Basics
@@ -14,38 +12,39 @@
 
 1. What is Node.js?
    - [History and evolution](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-history-evolution.md)
-   - Use cases and advantages
+   - [Use cases and advantages](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-use-cases-advantages.md)
 
 2. Core concepts
-   - Event loop
-   - Non-blocking I/O
-   - Single-threaded nature
+   - [Event loop](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-event-loop-detailed.md)
+   - [Non-blocking I/O](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-non-blocking-io.md)
+   - [Why was JS designed single-threaded](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/javascript-single-thread-explanation.md)
+   - [Single-threaded nature](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-single-threaded-nature.md)
 
-3. Setting up the development environment
+3. [Setting up the development environment](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/nodejs-dev-environment-setup.md)
    - Installing Node.js
    - Choosing an IDE (e.g., VS Code)
    - Basic terminal/command line usage
 
-4. First Node.js application
+4. [First Node.js application](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%201-2/first-nodejs-application.md)
    - Running JavaScript in Node.js REPL
    - Creating and running a simple script
    - Understanding modules and `require`
 
 ### Days 3-4: JavaScript for Node.js
 
-1. JavaScript fundamentals review (if needed)
-   - Variables, data types, and operators
-   - Control structures (if, loops)
-   - Functions and scope
+1. [JavaScript fundamentals review (if needed)](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/javascript-fundamentals-review.md)
+   - [Variables, data types, and operators](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/javascript-variables-datatypes-operators.md)
+   - [Deep understand var and let mechanism](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/javascript-var-let-mechanism.md)
+   - [Functions and scope](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/javascript-function-mechanics.md)
 
-2. ES6+ features
+2. [ES6+ features](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/es6-plus-features.md)
    - Arrow functions
    - Template literals
    - Destructuring
    - Spread and rest operators
    - Classes and inheritance
 
-3. Asynchronous programming
+3. [Asynchronous programming](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/javascript-asynchronous-programming.md)
    - Callbacks
    - Promises
    - Async/await
