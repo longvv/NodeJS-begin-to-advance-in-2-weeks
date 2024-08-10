@@ -35,7 +35,6 @@
 1. [JavaScript fundamentals review (if needed)](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/javascript-fundamentals-review.md)
    - [Variables, data types, and operators](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/javascript-variables-datatypes-operators.md)
    - [Deep understand var and let mechanism](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/javascript-var-let-mechanism.md)
-   - Control structures (if, loops)
    - [Functions and scope](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/javascript-function-mechanics.md)
 
 2. [ES6+ features](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%203-4/es6-plus-features.md)
