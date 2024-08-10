@@ -193,6 +193,217 @@ function better() {
 
 5. **Be aware of the event loop**: Async/await doesn't make synchronous operations asynchronous.
 
+# Why You Should Avoid Mixing Callbacks and Promises in Node.js
+
+## Overview
+
+Mixing callbacks and Promises in the same codebase, or worse, in the same function, can lead to several issues:
+
+1. Reduced code readability
+2. Inconsistent error handling
+3. Potential for callback hell
+4. Difficulty in maintaining and debugging
+5. Inconsistent control flow
+
+Let's explore each of these points in detail.
+
+## 1. Reduced Code Readability
+
+Mixing paradigms can make code harder to understand and follow.
+
+### Problematic Example:
+
+```javascript
+function fetchData(id, callback) {
+  somePromiseBasedFunction(id)
+    .then(result => {
+      callback(null, result);
+    })
+    .catch(error => {
+      callback(error);
+    });
+}
+
+fetchData(123, (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+});
+```
+
+### Better Approach:
+
+```javascript
+function fetchData(id) {
+  return somePromiseBasedFunction(id);
+}
+
+fetchData(123)
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+```
+
+## 2. Inconsistent Error Handling
+
+Callbacks and Promises handle errors differently, which can lead to inconsistent error handling patterns.
+
+### Problematic Example:
+
+```javascript
+function processData(data, callback) {
+  Promise.resolve(data)
+    .then(result => {
+      // Some processing
+      if (someCondition) {
+        callback(new Error('Some error'));
+      } else {
+        return morePrecessing(result);
+      }
+    })
+    .then(finalResult => {
+      callback(null, finalResult);
+    })
+    .catch(err => {
+      // This catch won't handle the error passed to the callback
+      console.error(err);
+    });
+}
+```
+
+### Better Approach:
+
+```javascript
+async function processData(data) {
+  try {
+    const result = await someProcessing(data);
+    if (someCondition) {
+      throw new Error('Some error');
+    }
+    return await moreProcessing(result);
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+}
+```
+
+## 3. Potential for Callback Hell
+
+Mixing can lead to nested callbacks within Promise chains, defeating the purpose of using Promises.
+
+### Problematic Example:
+
+```javascript
+function complexOperation(callback) {
+  asyncOperation1()
+    .then(result1 => {
+      asyncOperation2(result1, (err, result2) => {
+        if (err) {
+          callback(err);
+          return;
+        }
+        asyncOperation3(result2)
+          .then(result3 => {
+            callback(null, result3);
+          })
+          .catch(err => callback(err));
+      });
+    })
+    .catch(err => callback(err));
+}
+```
+
+### Better Approach:
+
+```javascript
+async function complexOperation() {
+  try {
+    const result1 = await asyncOperation1();
+    const result2 = await asyncOperation2(result1);
+    return await asyncOperation3(result2);
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+}
+```
+
+## 4. Difficulty in Maintaining and Debugging
+
+Mixed paradigms can make it harder to trace the flow of execution and debug issues.
+
+### Problematic Example:
+
+```javascript
+function fetchUserData(userId, callback) {
+  db.getUser(userId)
+    .then(user => {
+      api.getFriends(user.id, (err, friends) => {
+        if (err) {
+          callback(err);
+          return;
+        }
+        user.friends = friends;
+        callback(null, user);
+      });
+    })
+    .catch(err => callback(err));
+}
+```
+
+### Better Approach:
+
+```javascript
+async function fetchUserData(userId) {
+  try {
+    const user = await db.getUser(userId);
+    user.friends = await util.promisify(api.getFriends)(user.id);
+    return user;
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+}
+```
+
+## 5. Inconsistent Control Flow
+
+Mixing can lead to unexpected execution orders and race conditions.
+
+### Problematic Example:
+
+```javascript
+function processItems(items, callback) {
+  let processed = 0;
+  items.forEach(item => {
+    processItemAsync(item)
+      .then(() => {
+        processed++;
+        if (processed === items.length) {
+          callback(null, 'All items processed');
+        }
+      })
+      .catch(err => callback(err));
+  });
+}
+```
+
+### Better Approach:
+
+```javascript
+async function processItems(items) {
+  try {
+    await Promise.all(items.map(processItemAsync));
+    return 'All items processed';
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+}
+```
+
 ## Limitations and Considerations
 
 1. **Error Handling**: Unhandled Promise rejections can lead to silent failures.
