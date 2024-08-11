@@ -55,7 +55,7 @@
 
 ### Days 5-6: Node.js Core Modules and NPM
 
-1. Core modules
+1. [Core modules](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%205-6/nodejs-core-modules-overview.md)
    - fs (File System)
    - path
    - http/https
@@ -63,13 +63,13 @@
    - util
    - stream
 
-2. Node Package Manager (NPM)
+2. [Node Package Manager (NPM)](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%205-6/npm-package-management.md)
    - Understanding package.json
    - Installing packages (local vs. global)
    - Creating and publishing packages
    - Semantic versioning
 
-3. Popular third-party packages
+3. [Popular third-party packages](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Days%205-6/nodejs-popular-third-party-packages.md)
    - lodash
    - moment
    - axios
