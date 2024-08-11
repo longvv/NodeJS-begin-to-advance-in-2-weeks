@@ -1,6 +1,8 @@
 # Deep Dive into Node.js Ecosystem Components
 
 ## Core Modules
+<img width="1346" alt="Screenshot 2024-08-11 at 08 59 41" src="https://github.com/user-attachments/assets/1f2f316f-fa0f-42b9-a638-eacd65dc98db">
+
 
 ### 1. fs (File System)
 - Purpose: Provides an API for interacting with the file system.
