@@ -77,20 +77,20 @@
 
 ### Day 7: Express.js Framework
 
-1. Introduction to Express.js
+1. [Introduction to Express.js](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Day%207/express-js-introduction.md)
    - Why use a framework?
    - Express.js vs. other frameworks
 
-2. Setting up an Express server
+2. [Setting up an Express server](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Day%207/express-server-setup.md)
    - Basic server structure
    - Handling requests and responses
 
-3. Routing
+3. [Routing](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Day%207/express-routing-guide.md)
    - Route methods (GET, POST, etc.)
    - Route parameters
    - Query strings
 
-4. Middleware
+4. [Middleware](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Day%207/express-middleware-guide.md)
    - Built-in middleware
    - Custom middleware
    - Error-handling middleware
