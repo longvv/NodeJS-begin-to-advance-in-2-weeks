@@ -101,56 +101,56 @@
 
 ### Days 8-9: RESTful API Development
 
-1. REST principles
+1. [REST principles](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%208-9/rest-principles-guide.md)
    - Resource-based architecture
    - HTTP methods and their meanings
 
-2. Designing a RESTful API
+2. [Designing a RESTful API](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%208-9/restful-api-design-guide.md)
    - URL structure and conventions
    - Versioning
 
-3. Implementing CRUD operations
+3. [Implementing CRUD operations](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%208-9/express-crud-operations.md)
    - Creating resources (POST)
    - Reading resources (GET)
    - Updating resources (PUT/PATCH)
    - Deleting resources (DELETE)
 
-4. Request/response handling
+4. [Request/response handling](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%208-9/express-request-response-handling.md)
    - Parsing request bodies
    - Setting response headers
    - Status codes
 
 ### Day 10: Database Integration
 
-1. Choosing a database
+1. [Choosing a database](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2010-11/nodejs-database-selection.md)
    - Relational vs. NoSQL
    - Popular options (MongoDB, PostgreSQL)
 
-2. Connecting to the database
+2. [Connecting to the database](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2010-11/nodejs-database-connections.md)
    - Connection strings
    - Connection pooling
 
-3. Basic database operations
+3. [Basic database operations](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2010-11/nodejs-basic-database-operations.md)
    - Creating documents/records
    - Querying data
    - Updating data
    - Deleting data
 
-4. ORM/ODM (Optional)
+4. [ORM/ODM (Optional)](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2010-11/nodejs-orm-odm-guide.md)
    - Mongoose for MongoDB
    - Sequelize for SQL databases
 
 ### Day 11: Authentication and Security
 
-1. User authentication
+1. [User authentication](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2010-11/nodejs-user-authentication.md)
    - Password hashing (bcrypt)
    - Session-based vs. token-based auth
 
-2. JSON Web Tokens (JWT)
+2. [JSON Web Tokens (JWT)](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2010-11/json-web-tokens-guide.md)
    - Structure of a JWT
    - Signing and verifying tokens
 
-3. Security best practices
+3. [Security best practices](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2010-11/nodejs-security-best-practices.md)
    - HTTPS
    - Input validation
    - Rate limiting
@@ -158,17 +158,17 @@
 
 ### Days 12-13: Advanced Topics
 
-1. Error handling and logging
+1. [Error handling and logging](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2012-13/nodejs-error-handling-logging.md)
    - Custom error classes
    - Centralized error handling
    - Logging libraries (e.g., Winston)
 
-2. Testing Node.js applications
+2. [Testing Node.js applications](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2012-13/nodejs-testing-guide.md)
    - Unit testing with Jest or Mocha
    - Integration testing
    - Mocking and stubbing
 
-3. Deployment basics
+3. [Deployment basics](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-2_Days%2012-13/nodejs-deployment-basics.md)
    - Environment variables
    - Process managers (PM2)
    - Containerization with Docker
