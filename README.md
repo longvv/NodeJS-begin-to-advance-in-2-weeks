@@ -95,6 +95,8 @@
    - Custom middleware
    - Error-handling middleware
 
+5. [Best practices](https://github.com/longvv/NodeJS-begin-to-advance-in-2-weeks/blob/main/Week-1_Day%207/express-best-practices.md)
+
 ## Week 2: Advanced Concepts and Project
 
 ### Days 8-9: RESTful API Development
